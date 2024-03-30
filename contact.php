@@ -12,9 +12,9 @@ if (isset($_POST['submit'])) {
     $txt = "You have a message from " . $firstname . " " . $lastname . " with WhatsApp: " . $whatsapp . ".\n\n" . $message;
 
     if (mail($mailTo, 'Message from ' . $firstname . ' ' . $lastname, $txt, $headers)) {
-        $_SESSION['message'] = "Message sent successfully!";
+        $_SESSION['$message'] = "Message sent successfully!";
     } else {
-        $_SESSION['message'] = "Message sending failed. Please try again.";
+        $_SESSION['$message'] = "Message sending failed. Please try again.";
     }
     
    // if (isset($_SESSION['message'])) {
